@@ -56,7 +56,7 @@ const CommentsForm = ({ slug }) => {
     }
 
     axios
-    .post('http://localhost:3000/user/blogs/comments', commentObj, {
+    .post('https://engfluencers-final-1-backend.vercel.app/user/blogs/comments', commentObj, {
       headers: {
         'Content-Type': 'application/json',
       },

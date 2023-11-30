@@ -48,7 +48,7 @@ const ResourceLinkUpload = ({ currentSelectedRscSubcollection, isOpen, onClose }
                 formData.append("linkUrl", linkUrl);
 
                 // Construct the URL for the POST request
-                const url = `http://localhost:3000/admin/resources/links/videoUrl?subcollectionName=${currentSelectedRscSubcollection}`;
+                const url = `https://engfluencers-final-1-backend.vercel.app/admin/resources/links/videoUrl?subcollectionName=${currentSelectedRscSubcollection}`;
 
                 const response = await axios.post(url, formData ,{
                     headers: {

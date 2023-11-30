@@ -10,7 +10,7 @@ const ResourceLinks = ({ rscSubcollection }) => {
 
 
     try {
-      const response = await axios.delete(`http://localhost:3000/admin/resources/links/videoUrl`, {
+      const response = await axios.delete(`https://engfluencers-final-1-backend.vercel.app/admin/resources/links/videoUrl`, {
         params: {
           subcollectionName: rscSubcollection.name,
           videoUrlId: id,

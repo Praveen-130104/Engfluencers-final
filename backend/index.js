@@ -13,10 +13,7 @@ const app = express();
 
 
 // app.use(cors());
-app.use(cors());app.use(cors({
-  origin: 'http://localhost:5173',
-  credentials: true, // You can include this if you need to send cookies or authentication headers
-}));
+app.use(cors());
 
 
 app.use(express.json());

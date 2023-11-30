@@ -37,7 +37,7 @@ const SubCollections = ({ collectionName, handleModelClose }) => {
 
   const fetchSubCollections = async () => {
     try {
-      const response = await axios.get(`http://localhost:3000/admin/subcollections/${collectionName}`);
+      const response = await axios.get(`https://engfluencers-final-1-backend.vercel.app/admin/subcollections/${collectionName}`);
 
       if (response.status === 200) {
         const { subCollections } = response.data;
@@ -62,7 +62,7 @@ const SubCollections = ({ collectionName, handleModelClose }) => {
     }
     try {
       const response = await axios.post(
-        `http://localhost:3000/admin/subcollections/${collectionName}`,
+        `https://engfluencers-final-1-backend.vercel.app/admin/subcollections/${collectionName}`,
         {
           name: SubCollectionTitle,
         }
@@ -95,7 +95,7 @@ const SubCollections = ({ collectionName, handleModelClose }) => {
     try {
 
       // Make an API request to delete the file
-      const response = await axios.delete(`http://localhost:3000/admin/fileupload?subcollectionName=${subcollectionName}&fileName=${fileName}`, {
+      const response = await axios.delete(`https://engfluencers-final-1-backend.vercel.app/admin/fileupload?subcollectionName=${subcollectionName}&fileName=${fileName}`, {
       });
 
       if (response.status === 200) {
@@ -114,7 +114,7 @@ const SubCollections = ({ collectionName, handleModelClose }) => {
 
   const handleDeleteSubcollection = async (subcollectionName) => {
     try {
-      const response = await axios.delete(`http://localhost:3000/admin/subcollections/${subcollectionName}`);
+      const response = await axios.delete(`https://engfluencers-final-1-backend.vercel.app/admin/subcollections/${subcollectionName}`);
 
       if (response.status === 200) {
         // Handle successful deletion, such as updating the UI
@@ -133,7 +133,7 @@ const SubCollections = ({ collectionName, handleModelClose }) => {
   const handleReNameSub = async (newsubname) => {
     console.log("inside rename");
     try {
-      const response = await axios.put(`http://localhost:3000/admin/worksheets/subcollections/${collectionName}`,
+      const response = await axios.put(`https://engfluencers-final-1-backend.vercel.app/admin/worksheets/subcollections/${collectionName}`,
         {
           currentSelectedSubcollection,
           newsubname,

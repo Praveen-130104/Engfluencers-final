@@ -47,7 +47,7 @@ const Collections = ({ selectedCollection, updateSelectedCollection , sizeFunc})
 
     const fetchCollections = async () => {
         try {
-            const response = await axios.get("http://localhost:3000/admin/collections"); // Replace with your actual API endpoint
+            const response = await axios.get("https://engfluencers-final-1-backend.vercel.app/admin/collections"); // Replace with your actual API endpoint
 
             if (response.status === 200) {
                 //extracting collections array from response
@@ -65,7 +65,7 @@ const Collections = ({ selectedCollection, updateSelectedCollection , sizeFunc})
     const editCollection = async (collectionName, collectionId) => {
 
         try {
-            const response = await axios.put(`http://localhost:3000/admin/collections/${collectionId}`, {
+            const response = await axios.put(`https://engfluencers-final-1-backend.vercel.app/admin/collections/${collectionId}`, {
                 collectionName,
             });
 
@@ -110,7 +110,7 @@ const Collections = ({ selectedCollection, updateSelectedCollection , sizeFunc})
         }
 
         try {
-            const response = await axios.post("http://localhost:3000/admin/collections", {
+            const response = await axios.post("https://engfluencers-final-1-backend.vercel.app/admin/collections", {
                 collectionTitle,
             });
 
@@ -136,7 +136,7 @@ const Collections = ({ selectedCollection, updateSelectedCollection , sizeFunc})
     const handleDeleteCollection = async (collectionId) => {
         console.log(collectionId);
         try {
-            const response = await axios.delete(`http://localhost:3000/admin/collections/${collectionId}`);
+            const response = await axios.delete(`https://engfluencers-final-1-backend.vercel.app/admin/collections/${collectionId}`);
 
             if (response.status === 200) {
                 alert("Collection deleted successfully.");

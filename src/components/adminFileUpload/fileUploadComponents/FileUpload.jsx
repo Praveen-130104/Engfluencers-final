@@ -39,7 +39,7 @@ export const FileUpload = ({ isOpen, onClose, currentSelectedSubcollection }) =>
       formData.append("file", selectedFile);
 
       // Construct the URL for the POST request
-      const url = `http://localhost:3000/admin/fileupload?subcollectionName=${currentSelectedSubcollection}`;
+      const url = `https://engfluencers-final-1-backend.vercel.app/admin/fileupload?subcollectionName=${currentSelectedSubcollection}`;
 
       const response = await axios.post(url, formData);
 

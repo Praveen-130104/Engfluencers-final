@@ -11,7 +11,7 @@ const WorkSheets = () => {
 
     const handleFetchWorksheets = async () => {
         try {
-            const response = await axios.get("http://localhost:3000/user/worksheets");
+            const response = await axios.get("https://engfluencers-final-1-backend.vercel.app/user/worksheets");
             setCollections(response.data);
         } catch (error) {
             console.error(error);
@@ -33,7 +33,7 @@ const WorkSheets = () => {
         console.log(fileUrl);
         try {
             const response = await axios.post(
-                `http://localhost:3000/user/worksheets/download`,
+                `https://engfluencers-final-1-backend.vercel.app/user/worksheets/download`,
                 {
                     url: fileUrl, // Include the file URL in the request body
                 },

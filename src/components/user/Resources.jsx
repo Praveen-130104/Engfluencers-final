@@ -37,7 +37,7 @@ const Resources = () => {
 
     const handleRscWorksheets = async () => {
         try {
-            const response = await axios.get("http://localhost:3000/user/resources/worksheets");
+            const response = await axios.get("https://engfluencers-final-1-backend.vercel.app/user/resources/worksheets");
             setResourceCollections(response.data);
         } catch (error) {
             console.error(error);

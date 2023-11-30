@@ -12,7 +12,7 @@ const ResourceFiles = ({ rscSubcollection }) => {
     console.log("Subcollection name:", subcollectionName);
 
     try {
-      const response = await axios.delete(`http://localhost:3000/admin/resources/files/pdfs/del?subcollectionName=${subcollectionName}&fileName=${filename}`);
+      const response = await axios.delete(`https://engfluencers-final-1-backend.vercel.app/admin/resources/files/pdfs/del?subcollectionName=${subcollectionName}&fileName=${filename}`);
       if (response.status === 200) {
         const updatedFiles = files.filter((file) => file.filename !== filename);
         setFiles(updatedFiles);

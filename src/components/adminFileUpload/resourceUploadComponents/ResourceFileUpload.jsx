@@ -40,7 +40,7 @@ const ResourceFileUpload = ({isOpen, onClose , currentSelectedRscSubcollection})
       formData.append("file", selectedFile);
 
       // Construct the URL for the POST request
-      const url = `http://localhost:3000/admin/resources/fileupload?subcollectionName=${currentSelectedRscSubcollection}`;
+      const url = `https://engfluencers-final-1-backend.vercel.app/admin/resources/fileupload?subcollectionName=${currentSelectedRscSubcollection}`;
 
       const response = await axios.post(url, formData);
 

@@ -42,7 +42,7 @@ const ResourceSubCollection = ({ selectedRscCollection, handleModelClose }) => {
 
     const fetchSubCollections = async () => {
         try {
-            const response = await axios.get(`http://localhost:3000/admin/resources/subcollections/${selectedRscCollection}`);
+            const response = await axios.get(`https://engfluencers-final-1-backend.vercel.app/admin/resources/subcollections/${selectedRscCollection}`);
 
             if (response.status === 200) {
                 const { subCollections } = response.data;
@@ -72,7 +72,7 @@ const ResourceSubCollection = ({ selectedRscCollection, handleModelClose }) => {
         }
         try {
             const response = await axios.post(
-                `http://localhost:3000/admin/resources/subcollections/${selectedRscCollection}`,
+                `https://engfluencers-final-1-backend.vercel.app/admin/resources/subcollections/${selectedRscCollection}`,
                 {
                     name: RscSubCollectionTitle,
                 }
@@ -128,7 +128,7 @@ const ResourceSubCollection = ({ selectedRscCollection, handleModelClose }) => {
     const handleReNameRscSub = async (newsubname) => {
 
         try {
-            const response = await axios.put(`http://localhost:3000/admin/resources/subcollections/${selectedRscCollection}`,
+            const response = await axios.put(`https://engfluencers-final-1-backend.vercel.app/admin/resources/subcollections/${selectedRscCollection}`,
                 {
                     currentSelectedRscSubcollection,
                     newsubname,
@@ -159,7 +159,7 @@ const ResourceSubCollection = ({ selectedRscCollection, handleModelClose }) => {
     const handleDeleteSubcollection = async (subcollectionName) => {
         console.log(subcollectionName);
         try {
-            const response = await axios.delete(`http://localhost:3000/admin/resources/subcollections/${subcollectionName}`);
+            const response = await axios.delete(`https://engfluencers-final-1-backend.vercel.app/admin/resources/subcollections/${subcollectionName}`);
 
             if (response.status === 200) {
                 console.log("SubCollection deleted successfully");

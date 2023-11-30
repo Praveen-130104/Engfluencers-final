@@ -52,7 +52,7 @@ const AdminResourceUpload = () => {
 
     const fetchCollections = async () => {
         try {
-            const response = await axios.get("http://localhost:3000/admin/resources"); // Replace with your actual API endpoint
+            const response = await axios.get("https://engfluencers-final-1-backend.vercel.app/admin/resources"); // Replace with your actual API endpoint
 
             if (response.status === 200) {
                 //extracting collections array from response
@@ -73,7 +73,7 @@ const AdminResourceUpload = () => {
         }
 
         try {
-            const response = await axios.post("http://localhost:3000/admin/resources", {
+            const response = await axios.post("https://engfluencers-final-1-backend.vercel.app/admin/resources", {
                 RscCollectionTitle,
             });
 
@@ -99,7 +99,7 @@ const AdminResourceUpload = () => {
     const editCollection = async (collectionName, collectionId) => {
 
         try {
-            const response = await axios.put(`http://localhost:3000/admin/resources/${collectionId}`, {
+            const response = await axios.put(`https://engfluencers-final-1-backend.vercel.app/admin/resources/${collectionId}`, {
                 collectionName,
             });
 
@@ -131,7 +131,7 @@ const AdminResourceUpload = () => {
     const handleDeleteRscCollection = async (collectionId) => {
         console.log(collectionId);
         try {
-            const response = await axios.delete(`http://localhost:3000/admin/resources/${collectionId}`);
+            const response = await axios.delete(`https://engfluencers-final-1-backend.vercel.app/admin/resources/${collectionId}`);
 
             if (response.status === 200) {
                 alert("Collection deleted successfully.");
