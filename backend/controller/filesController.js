@@ -11,7 +11,7 @@ import { Buffer } from 'buffer'
 //model
 import File from '../model/model.js'
 
-import { storage } from '../../firebaseConfig.js'
+import { storage } from '../firebaseConfig.js'
 
 //create Collections
 

@@ -1,8 +1,8 @@
 import { ref, uploadBytes, getDownloadURL , deleteObject } from "firebase/storage";
-import fetch from "node-fetch";
-import { Buffer } from "buffer";
+// import fetch from "node-fetch";
+// import { Buffer } from "buffer";
 import ResourceFile from "../model/resourceModel.js";
-import { storage } from "../../firebaseConfig.js";
+import { storage } from "../firebaseConfig.js";
 
 
 
