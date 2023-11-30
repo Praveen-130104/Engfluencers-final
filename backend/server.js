@@ -3,7 +3,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 
-
+import routerHome from "./routes/Routes.js";
 import router from "./routes/adminRoutes.js";
 import userRouter from "./routes/userRoutes.js";
 
@@ -13,11 +13,11 @@ const app = express();
 
 
 // app.use(cors());
-app.use(cors({
-  origin: 'https://localhost:5173', 
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
+app.use(cors());app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true, // You can include this if you need to send cookies or authentication headers
 }));
+
 
 app.use(express.json());
 
@@ -34,6 +34,8 @@ mongoose.connect(process.env.mongoURI, {
 })
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.log(err));
+
+app.use("/", routerHome);
 
 app.use("/admin", router);
 app.use("/user", userRouter);
