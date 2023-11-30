@@ -1,4 +1,4 @@
-import dotenv from "dotenv";
+import "dotenv/config";
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
@@ -7,7 +7,7 @@ import cors from "cors";
 import router from "./routes/adminRoutes.js";
 import userRouter from "./routes/userRoutes.js";
 
-dotenv.config({path:"../.env"});
+// dotenv.config({path:"../.env"});
 
 const app = express();
 
