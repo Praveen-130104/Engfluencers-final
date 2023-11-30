@@ -12,10 +12,7 @@ dotenv.config({path:"../.env"});
 const app = express();
 
 
-app.use(cors({
-  origin: "http://localhost:5173",
-  credentials: true,
-}));
+app.use(cors());
 
 app.use(express.json());
 
@@ -30,7 +27,13 @@ mongoose.connect(process.env.mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
-  .then(() => console.log("Connected to MongoDB"))
+  .then(() => {
+    console.log("Connected to MongoDB");
+    app.listen(port,  () => {
+      console.log(`Server listening on port ${port}`);
+    });
+    
+})
   .catch((err) => console.log(err));
 
 app.use("/admin", router);
@@ -43,6 +46,3 @@ app.use("/user", userRouter);
 //   next();
 // });
 
-app.listen(port, '0.0.0.0', () => {
-  console.log(`Server listening on port ${port}`);
-});
