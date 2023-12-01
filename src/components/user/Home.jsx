@@ -80,6 +80,7 @@ const Home = () => {
                                         WORKSHEETS
                                     </span>
                                 </Link>
+                                <Link to='/admin'>Admin</Link>
                             </div>
 
                             <div className="sticky bottom-0 sm:bottom-44 md:bottom-52 lg:bottom-72 xl:bottom-96 h-2  z-10  left-0 w-full"
