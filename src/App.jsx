@@ -11,6 +11,7 @@ import Home from './components/user/Home';
 import Navbar from './components/user/Navbar';
 import Footer from './components/user/Footer';
 import WorkSheets from './components/user/WorkSheets';
+import LandingPage from './components/user/LandingPage';
 
 
 import Blog from './components/user/Blog';
@@ -66,6 +67,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<LandingPage />} />
         <Route path="/admin/*" element={<AdminRoutes />} />
         <Route path="/user/*" element={<UserRoutes />} /> {/* Define a user route */}
       </Routes>
