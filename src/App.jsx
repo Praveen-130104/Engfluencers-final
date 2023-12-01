@@ -53,10 +53,10 @@ const UserRoutes = () => {
     <Navbar />
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/worksheets" element={<WorkSheets />} />
-      <Route path="/blog" element={<Blog />} />
-      <Route path="/blog/:slug" element={<PostReading />} />
-      <Route path="/resources" element={<Resources />} />
+      <Route path="/user//worksheets" element={<WorkSheets />} />
+      <Route path="/user/blog" element={<Blog />} />
+      <Route path="/user/blog/:slug" element={<PostReading />} />
+      <Route path="/user/resources" element={<Resources />} />
     </Routes> 
     <Footer />
   </>
@@ -69,7 +69,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/admin/*" element={<AdminRoutes />} />
-        <Route path="/user/*" element={<UserRoutes />} /> {/* Define a user route */}
+        <Route path="/*" element={<UserRoutes />} /> {/* Define a user route */}
       </Routes>
     </Router>
   );
