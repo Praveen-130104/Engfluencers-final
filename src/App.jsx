@@ -53,7 +53,7 @@ const UserRoutes = () => {
     <Navbar />
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/user//worksheets" element={<WorkSheets />} />
+      <Route path="/user/worksheets" element={<WorkSheets />} />
       <Route path="/user/blog" element={<Blog />} />
       <Route path="/user/blog/:slug" element={<PostReading />} />
       <Route path="/user/resources" element={<Resources />} />
