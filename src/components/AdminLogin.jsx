@@ -1,5 +1,5 @@
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { app } from '../../firebaseConfig';
 import { useNavigate } from 'react-router-dom';
 
@@ -43,6 +43,10 @@ const AdminLogin = () => {
             console.error('Authentication failed', error);
         }
     };
+    useEffect(() => {
+        const auth = getAuth(app);
+        console.log(auth.currentUser);
+    }, []);
 
     return (
         <div className="flex flex-col md:flex-row  h-screen items-center justify-center bg-gradient-to-r from-cyan-100 to-blue-300 "
