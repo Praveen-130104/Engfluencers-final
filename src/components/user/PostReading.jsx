@@ -1,7 +1,7 @@
 import { useEffect , useState} from "react";
 import { useParams } from "react-router-dom";
 import { PostDetail , PostWidget , Author, Comments, CommentsForm, About} from "../blogComps/index"
-import { getPostDetails } from "../graphServices"
+import { getPostDetails } from "../graphServices/index"
 
 const PostReading = () => {
 
