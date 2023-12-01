@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "../../App.css";
-import { PostCard, PostWidget, About } from "../BlogComps"
+import { PostCard, PostWidget, About } from "../blogComps/index";
 import { getPosts } from "../graphServices";
 import FeaturedPosts from "./FeaturedPost";
 import ReactPaginate from "react-paginate";
