@@ -2,7 +2,7 @@ import './App.css'
 import 'animate.css';
 import { BrowserRouter as Router , Routes , Route } from 'react-router-dom'
 import AdminLogin from './components/AdminLogin';
-import AdminFileUpload from './components/AdminFileUpload/AdminFileUpload';
+import AdminFileUpload from './components/adminFileUpload/AdminFileUpload';
 import AdminNavbar from './components/adminFileUpload/AdminNavbar';
 import AdminResourceUpload from './components/adminFileUpload/AdminResourceUpload';
 
